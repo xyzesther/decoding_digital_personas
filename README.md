@@ -37,9 +37,20 @@ Understanding personality types from social media content has applications in pe
 
 ### ➤ Deep Learning
 
-- **Models Used:** LSTM, BERT
-- **Fine-Tuning:** BERT with MLP head for classification
-- **Libraries:** `transformers`, `torch`, `scikit-learn`, `pandas`, `matplotlib`
+- **Model Used:** BERT with a multi-layer perceptron (MLP) classifier head
+- **Approach:**
+  - Fine-tune the full BERT model with a small MLP on top for 4-way binary MBTI trait prediction (I/E, N/S, T/F, J/P)
+  - Training on concatenated social media posts (first 256 tokens per user)
+- **Architecture:**
+  - Pretrained BERT-base (bert-base-uncased)
+  - MLP with hidden layer: 768 → 50 → 4
+- **Loss Function:** BCEWithLogitsLoss for multi-label binary classification
+- **Training Framework:** PyTorch
+- **Tokenizer:** Hugging Face transformers.BertTokenizer
+- **Evaluation:** Predictions converted to 4 binary labels, mapped to 16 MBTI types
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xyzesther/decoding_digital_personas/blob/main/BERT_MLP_MBTI_Finetune.ipynb)
+
 
 ## 🧪 Experiments
 
