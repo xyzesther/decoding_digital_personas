@@ -14,7 +14,7 @@ Understanding personality types from social media content has applications in pe
 ## 🧠 Objectives
 
 - Build models to classify MBTI types based on textual data.
-- Compare traditional ML models (e.g., Logistic Regression, Random Forest) with deep learning models (e.g., LSTM, BERT).
+- Compare traditional ML models (e.g., Logistic Regression, Random Forest) with deep learning models (e.g., BERT).
 - Use interpretable AI methods (e.g., SHAP) to explain predictions.
 - Evaluate performance across multiple feature representations.
 
@@ -28,7 +28,7 @@ Understanding personality types from social media content has applications in pe
 
 ### ➤ Traditional Machine Learning
 
-- **Models Used:** Logistic Regression, Random Forest, (SVM - optional)
+- **Models Used:** Logistic Regression, Random Forest, XGBoost
 - **Feature Representations:**
   - CountVectorizer
   - TF-IDF
@@ -49,7 +49,7 @@ Understanding personality types from social media content has applications in pe
 - **Tokenizer:** Hugging Face transformers.BertTokenizer
 - **Evaluation:** Predictions converted to 4 binary labels, mapped to 16 MBTI types
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xyzesther/decoding_digital_personas/blob/main/BERT_MLP_MBTI_Finetune.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/xyzesther/decoding_digital_personas/blob/main/BERT_MLP_Model_MBTI_Prediction.ipynb)
 
 
 ## 🧪 Experiments
