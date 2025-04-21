@@ -30,12 +30,11 @@ pip install -r requirements.txt
 
 ### ➤ Traditional Machine Learning
 
-- **Models Used:** Logistic Regression, Random Forest, XGBoost
+- **Models Used:** Logistic Regression, XGBoost
 - **Feature Representations:**
   - CountVectorizer
   - TF-IDF
-  - Word2Vec / GloVe embeddings (optional extension)
-- **Explainability:** SHAP (Shapley Additive Explanations)
+
 
 ### ➤ Deep Learning
 
