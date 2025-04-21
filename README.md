@@ -31,11 +31,25 @@ pip install -r requirements.txt
 ### ➤ Traditional Machine Learning
 
 - **Models Used:** Logistic Regression, XGBoost
+- **Preprocessing**: TF-IDF on cleaned posts (lowercase, remove URLs, HTML, emojis,
+punctuation, stopwords) → top 3000 features
 - **Feature Representations:**
   - CountVectorizer
   - TF-IDF
-
-
+- **Model Setup for XGBoost**
+  - **Architecture**: XGBoost classifier (100 trees, max depth 5, learning rate 0.1)
+  - **Output**: 4 binary classifiers (I/E, N/S, F/T, P/J) trained independently
+  - **Class Imbalance**: scale_pos_weight used based on training data distribution
+  - **Evaluation**: Accuracy + Classification Report + Confusion Matrix
+  - **Visualization**: Training log loss curve for convergence tracking
+  - 
+- **Model Setup for Logistic Regression**
+  - **Architecture**: Scikit-learn LogisticRegression (max_iter=1000, solver='saga')
+  - **Output**: 4 binary classifiers (I/E, N/S, F/T, P/J) trained independently
+  - **Class Imbalance**: class_weight='balanced' used for I/E and N/S traits
+  - **Evaluation**: Accuracy + Classification Report + Confusion Matrix
+  - **Visualization**: Training log loss curve for convergence tracking
+  - **Interpretability**: Top positive/negative word features visualized by coefficient weight
 ### ➤ Deep Learning
 
 - **Model Used:** BERT with a multi-layer perceptron (MLP) classifier head
