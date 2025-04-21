@@ -42,7 +42,7 @@ punctuation, stopwords) → top 3000 features
   - **Class Imbalance**: scale_pos_weight used based on training data distribution
   - **Evaluation**: Accuracy + Classification Report + Confusion Matrix
   - **Visualization**: Training log loss curve for convergence tracking
-  - 
+    
 - **Model Setup for Logistic Regression**
   - **Architecture**: Scikit-learn LogisticRegression (max_iter=1000, solver='saga')
   - **Output**: 4 binary classifiers (I/E, N/S, F/T, P/J) trained independently
